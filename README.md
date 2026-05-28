@@ -1,3 +1,4 @@
+
 # Movie Catalog - Каталог фильмов
 
 ## Описание
@@ -33,8 +34,29 @@ Android-приложение для ведения личного каталог
 ## Используемые технологии
 - **Язык:** Java
 - **UI:** XML Layouts
-- **Хранение данных:** SQLite (Room-like структура)
+- **Хранение данных:** SQLite
 - **Компоненты:** RecyclerView, CardView, FloatingActionButton
 - **Минимальный SDK:** API 24 (Android 7.0)
 
-## 📦 Структура проекта
+## Структура проекта
+```
+app/src/main/java/com/yourname/moviecatalog/
+├── adapter/
+│   └── MovieAdapter.java          # Адаптер для RecyclerView
+├── database/
+│   ├── MovieDatabaseHelper.java   # Помощник SQLite
+│   └── MovieRepository.java       # CRUD операции
+├── model/
+│   └── Movie.java                 # Модель данных
+└── ui/
+    ├── MainActivity.java          # Главный экран
+    ├── AddMovieActivity.java      # Экран добавления
+    └── MovieDetailsActivity.java  # Экран деталей
+```
+
+## Инструкция по запуску
+
+### Требования
+- Android Studio Arctic Fox или новее
+- JDK 11 или выше
+- Эмулятор Android API 24+ или физическое устройство
