@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <EditText
+            android:id="@+id/et_title"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="Название фильма"
+            android:inputType="textCapWords"
+            android:autofillHints="name"
+            android:minHeight="48dp" />
+
+        <EditText
+            android:id="@+id/et_year"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="Год выпуска (например, 2023)"
+            android:inputType="number"
+            android:autofillHints="postalCode"
+            android:minHeight="48dp"
+            android:layout_marginTop="8dp" />
+
+        <EditText
+            android:id="@+id/et_genre"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="Жанр (например, Боевик)"
+            android:inputType="text"
+            android:autofillHints="name"
+            android:minHeight="48dp"
+            android:layout_marginTop="8dp" />
+
+        <EditText
+            android:id="@+id/et_rating"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="Рейтинг (0-10)"
+            android:inputType="numberDecimal"
+            android:autofillHints="name"
+            android:minHeight="48dp"
+            android:layout_marginTop="8dp" />
+
+        <EditText
+            android:id="@+id/et_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Описание сюжета"
+            android:inputType="textMultiLine"
+            android:minLines="3"
+            android:minHeight="100dp"
+            android:gravity="top"
+            android:autofillHints="name"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:text="Статус просмотра:"
+            android:textStyle="bold"
+            android:gravity="center_vertical"
+            android:layout_marginTop="16dp" />
+
+        <RadioGroup
+            android:id="@+id/radio_group_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp">
+
+            <RadioButton
+                android:id="@+id/rb_planned"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:text="Планирую"
+                android:checked="true"
+                android:minHeight="48dp" />
+
+            <RadioButton
+                android:id="@+id/rb_watching"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:text="Смотрю"
+                android:minHeight="48dp" />
+
+            <RadioButton
+                android:id="@+id/rb_watched"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:text="Просмотрено"
+                android:minHeight="48dp" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/btn_save"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="Сохранить"
+            android:layout_marginTop="24dp"
+            android:minHeight="48dp"
+            android:backgroundTint="?attr/colorPrimary" />
+    </LinearLayout>
+</ScrollView>
